@@ -78,7 +78,6 @@ awk -F "\t" '$3 ~ /1/' teosinte_comb.txt | sort -t $'\t' -k4,4rn | sed 's/?/-/g'
 awk -F "\t" '$3 ~ /1/' teosinte_comb.txt | sort -t $'\t' -k4,4n > Teosinte_Files/Increasing_SNPs/teosinte_chr01.txt #For each of the ten chromosomes individually
 awk -F "\t" '$3 ~ /unknown/' teosinte_comb.txt > Teosinte_Files/teosinte_unknown.txt
 awk -F "\t" '$3 ~ /multiple/' teosinte_comb.txt > Teosinte_Files/teosinte_multiple.txt
-
 ```
 
 This code finds samples with the identifier "ZMPBA, ZMPIL, ZMPJA" and pulls those out while keeping the header. It then transposes the header and row names. 
