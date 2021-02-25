@@ -76,8 +76,8 @@ join -1 1 -2 1 -t $'\t' snp_position_sorted.txt teosinte_geno_sorted.txt > teosi
 mkdir -p Teosinte_Files/{Increasing_SNPs, Decreasing_SNPs}
 awk -F "\t" '$3 ~ /1/' teosinte_comb.txt | sort -t $'\t' -k4,4rn | sed 's/?/-/g' > Teosinte_Files/Decreasing_SNPs/teosinte_chr01.txt #for all 10 chromosomes individually
 awk -F "\t" '$3 ~ /1/' teosinte_comb.txt | sort -t $'\t' -k4,4n > Teosinte_Files/Increasing_SNPs/teosinte_chr01.txt #For each of the ten chromosomes individually
-
-
+awk -F "\t" '$3 ~ /unknown/' teosinte_comb.txt > Teosinte_Files/teosinte_unknown.txt
+awk -F "\t" '$3 ~ /multiple/' teosinte_comb.txt > Teosinte_Files/teosinte_multiple.txt
 ```
 
 This code finds samples with the identifier "ZMPBA, ZMPIL, ZMPJA" and pulls those out while keeping the header. It then transposes the header and row names. 
