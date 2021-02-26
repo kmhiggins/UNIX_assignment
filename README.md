@@ -19,7 +19,7 @@ By inspecting this file I learned that:
 3. The gene names are the column names
 4. There is no commented out header line
 5. There is no non-ASCII text 
-6. There is disorcer with SL-15 
+6. There is disorder with SL-15 
 
 
 ###Attributes of `snp_position.txt`
